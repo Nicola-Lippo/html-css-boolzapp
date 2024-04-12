@@ -5,19 +5,40 @@
     font-family: 'Lato', sans-serif;
 }
 
+.contenuto {
+    padding: 10px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.center {
+    align-items: center;
+}
+
+.sb-center {
+    justify-content: space-between;
+    align-items: center;
+}
+
+img {
+    height: 50px;
+    border-radius: 50%;
+}
+
 /*********
 MOBILE FIRST
 **********/
 body {
     height: 100vh;
     display: flex;
-    background-color: rgb(165, 178, 178);
+    background: linear-gradient(#019789 15%, #d9dbd5 15%, #d9dbd5 85%);
     
 }
 
 .container {
     width: 100%;
-    background-color: bisque;
     display: flex;
 }
 
@@ -31,23 +52,47 @@ body {
 
 #col-dx {
     width: 100%;
-    background-color: aquamarine;
+    background-color: white;
 }
+
+/* IMG + CONTATTO */
 
 .contatto {
     height: 70px;
-    background-color: blueviolet;
 }
+
+.specifiche {
+    padding-left: 20px;
+}
+
+.nome {
+    font-size: 17px;
+}
+
+.accesso {
+    font-size: 12px;
+    color: gray;
+}
+
+.icone {
+    display: none;
+}
+
+/* MESSAGGI */
 
 .mess {
     height: calc(100% - 140px);
     background-image: url(../img/mine.jpg);
 }
 
+/* SCRIVI TESTO + INVIA */
+
 .invia {
     height: 70px;
     background-color: blanchedalmond;
 }
+
+
 
 /*********
 MEDIA TABLET
@@ -63,7 +108,7 @@ MEDIA TABLET
 
     #col-sx .me {
         height: 70px;
-        background-color: rgb(89, 105, 56);
+        background-color: white;
     }
 
     #col-sx .rubrica {
@@ -78,6 +123,23 @@ MEDIA TABLET
         width: 90%;
     }
 
+    /* ME */
+
+    #col-sx .icone {
+        display: none;
+    }
+
+    /* IMG + CONTATTO */
+
+    #col-dx .icone {
+        display: block;
+    }
+
+    i {
+        padding: 0 5px;
+        color: gray;
+    }
+
 }
 
 /*********
@@ -86,15 +148,27 @@ MEDIA PC
 
 @media screen and (min-width: 992px)  {
 
+    .container {
+        width: 80%;
+        height: 90%;
+        display: flex;
+        margin: auto;
+    }
+
     /* COLONNA SINISTRA */
 
     #col-sx {
         width: 30%;
     }
 
+    /* ME*/
+
     #col-sx .me {
         height: 70px;
-        background-color: rgb(89, 105, 56);
+    }
+
+    #col-sx .icone {
+        display: block;
     }
 
     #col-sx .notifiche {
