@@ -2,8 +2,124 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
 }
 
 /*********
 MOBILE FIRST
 **********/
+body {
+    height: 100vh;
+    display: flex;
+    background-color: rgb(165, 178, 178);
+    
+}
+
+.container {
+    width: 100%;
+    background-color: bisque;
+    display: flex;
+}
+
+/* COLONNA SINISTRA */
+
+#col-sx {
+    display: none;
+}
+
+/* COLONNA DESTRA */
+
+#col-dx {
+    width: 100%;
+    background-color: aquamarine;
+}
+
+.contatto {
+    height: 70px;
+    background-color: blueviolet;
+}
+
+.mess {
+    height: calc(100% - 140px);
+    background-image: url(../img/mine.jpg);
+}
+
+.invia {
+    height: 70px;
+    background-color: blanchedalmond;
+}
+
+/*********
+MEDIA TABLET
+**********/
+@media screen and (min-width: 576px) {
+
+    /* COLONNA SINISTRA */
+
+    #col-sx {
+        display: block;
+        width: 10%;
+    }
+
+    #col-sx .me {
+        height: 70px;
+        background-color: rgb(89, 105, 56);
+    }
+
+    #col-sx .rubrica {
+        height: calc(100% - 70px);
+        background-color: rgb(105, 56, 95);
+    }
+
+
+    /* COLONNA DESTRA */
+
+    #col-dx {
+        width: 90%;
+    }
+
+}
+
+/*********
+MEDIA PC
+**********/
+
+@media screen and (min-width: 992px)  {
+
+    /* COLONNA SINISTRA */
+
+    #col-sx {
+        width: 30%;
+    }
+
+    #col-sx .me {
+        height: 70px;
+        background-color: rgb(89, 105, 56);
+    }
+
+    #col-sx .notifiche {
+        height: 90px;
+        background-color: rgb(46, 213, 239);
+    }
+
+    #col-sx .cerca {
+        height: 50px;
+        background-color: rgb(167, 198, 43);
+    }
+
+    #col-sx .rubrica {
+        height: calc(100% - 210px);
+        background-color: rgb(105, 56, 95);
+    }
+
+
+    /* COLONNA DESTRA */
+
+    #col-dx {
+        width: 70%;
+    }
+    
+}
+
+
+
